@@ -2,6 +2,50 @@
 
 header {
     background-color: #525355;
-    height: 50px;
-    
+    height: $heightHeader;
+    margin-bottom: 70px;
+    .header__top {
+        position: relative;
+        height: $heightHeader; 
+        .logo {
+            @include mid(true);
+            height: 100%;
+            img {
+                width: 42px;
+            }
+            h1 {
+                display: none;
+            }
+        }
+        .logo-fb {
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            img {
+                width: 14px;
+            }
+        }
+    }
+    .header__menu {
+        .container {
+            @include text(12px, pb,30.48px, $text-cl, uppercase );
+            .header__menu-big {
+                justify-content: space-between;
+                display: flex;
+                padding: 30px 0 12px 0;  
+                margin: 0 -15px;
+                border-bottom: 1px solid $text-black-cl;
+                li {
+                    ul {
+                        display: flex;
+                        justify-content: space-around;
+                        li {
+                            padding: 0 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

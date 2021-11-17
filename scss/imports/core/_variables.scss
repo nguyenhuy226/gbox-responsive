@@ -1,9 +1,10 @@
 /*primary colors*/
 $white-cl: #fff;
 $black-cl: #000;
+$yellow-cl: #ffde00;
 
 /*global text color*/
-$text-cl: #222;
+$text-cl: #171717;
 $text-black-cl: #000;
 
 /*global bg color*/
@@ -25,11 +26,14 @@ $lh-text: normal;
 $fz-text-m: 16px;
 $lh-text-m: normal;
 
+
+$heightHeader : 72px;
+
 //============================================================//
 
 /*BOXED LAYOUT*/
 $container-max-width: 1920px;
-$container-width: 980px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
+$container-width: 1010px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH

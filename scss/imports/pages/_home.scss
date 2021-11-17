@@ -1,1 +1,91 @@
 // CSS HOMEPAGE
+.homepage {
+    .present {
+        padding: 60px 0 48px 0;
+        text-align: center;
+        position: relative;
+        &::after {
+            content: "";
+            width: 320px;
+            height: 1px;
+            background-color: $text-black-cl;
+            position: absolute;
+            left: 50%;
+            @include transform(translateX(-50%))
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // position: relative;
+            .present__first {
+                @include text(14px, pr, 22px, $text-cl,uppercase);  
+                width: 80px;
+                // @include mid();
+                padding-bottom: 30px;
+                letter-spacing: 2px;
+            }
+            .present__title {
+                margin-bottom: 62px;
+                @include text(20px,pb,30.48px, #525355, uppercase);
+                letter-spacing: 3px;
+                position: relative;
+                z-index: 10;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: #ffde00;
+                    width: 100%;
+                    height: 50%;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    @include mid()
+                }
+            }   
+            .present__des {
+                @include text(12px ,pb,22px ,$text-cl,normal);
+                width: 760px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    
+    .objects {
+        .container {
+            padding-bottom: 50px;
+            border-bottom: 1px solid $text-cl;
+        }
+        &__nav {
+            padding-bottom: 30px;
+            ul {
+                @include text(12px ,pb ,30.48px ,#9a9a9a, uppercase);
+                @include mid(true);
+                li {
+                    padding: 0 16px;
+                    &:hover {
+                        color: $text-cl;
+                    }
+                }
+            }
+        }
+        &__foot {
+            text-align: center;
+            &-text {
+                @include text(12px ,pb ,30.48px,$text-cl, uppercase)
+            }
+            &-icon {
+                a {
+                    img {
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+
+    }
+}

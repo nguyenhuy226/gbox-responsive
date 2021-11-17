@@ -1,1 +1,24 @@
 // css components
+.object {
+    &__text {
+        text-align: center;
+        padding-bottom: 70px;
+        &-title {
+            padding-top: 36px;
+            @include text(12px , pe , 30.48px ,$text-cl, uppercase);
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 3px;
+                background-color: #ffde00;
+                bottom: 0px;
+                @include transform(translateX(-50px))
+            }
+        }
+        &-des {
+            @include text(12px ,pb, 20px, $text-cl, normal)
+        }
+    }
+}
