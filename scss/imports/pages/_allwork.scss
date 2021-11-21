@@ -1,0 +1,20 @@
+.allworkpage {
+    .objects {
+        .container {
+            .objects__foot-hasinallwork {
+                height: $wbtn;
+                position: relative;
+            }
+        }
+    }
+    @include xs {
+        .objects {
+            .container {
+                .objects__foot {
+                    height: $wbtn;
+                    position: initial;
+                }
+            }
+        }
+    }
+}

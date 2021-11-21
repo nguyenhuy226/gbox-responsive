@@ -1,24 +1,82 @@
 // css components
-.object {
-    &__text {
-        text-align: center;
-        padding-bottom: 70px;
-        &-title {
-            padding-top: 36px;
-            @include text(12px , pe , 30.48px ,$text-cl, uppercase);
-            position: relative;
-            &::after {
-                content: "";
-                position: absolute;
-                width: 16px;
-                height: 3px;
-                background-color: #ffde00;
-                bottom: 0px;
-                @include transform(translateX(-50px))
+.objects {
+    padding-top: 48px;
+    .container {
+        padding-bottom: 50px;
+        border-bottom: 1px solid $text-cl;
+    }
+    &__wrap {
+        .object {
+
+            &__text {
+                text-align: center;
+                padding-bottom: 70px;
+                &-title {
+                    padding-top: 36px;
+                    @include text(12px , pe , 30.48px ,$text-cl, uppercase);
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 16px;
+                        height: 3px;
+                        background-color: #ffde00;
+                        bottom: 0px;
+                        @include transform(translateX(-50px))
+                    }
+                }
+                &-des {
+                    @include text(12px ,pb, 20px, $text-cl, normal)
+                }
             }
         }
-        &-des {
-            @include text(12px ,pb, 20px, $text-cl, normal)
+    }
+    &__nav {
+        padding-bottom: 30px;
+        ul {
+            @include text(12px ,pb ,30.48px ,#9a9a9a, uppercase);
+            @include mid(true);
+            li {
+                padding: 0 16px;
+                &:hover {
+                    color: $text-cl;
+                }
+            }
+        }
+    }
+    &__foot {
+        text-align: center;
+        &-text {
+            @include text(12px ,pb ,30.48px,$text-cl, uppercase)
+        }
+        &-icon {
+            a {
+                img {
+                    width: 18px;
+                }
+            }
+        }
+    }
+    @include xs {
+        &__nav {
+            display: none;
+            &.inallwork {
+                display: block;
+                ul {
+                    li {
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+        .container {
+            .objects__wrap {
+                .object {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

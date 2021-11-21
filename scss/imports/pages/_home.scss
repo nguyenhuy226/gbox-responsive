@@ -1,7 +1,7 @@
 // CSS HOMEPAGE
 .homepage {
     .present {
-        padding: 60px 0 48px 0;
+        padding: 60px 0 0 0;
         text-align: center;
         position: relative;
         &::after {
@@ -66,51 +66,6 @@
         }
     }
     
-    .objects {
-        .container {
-            padding-bottom: 50px;
-            border-bottom: 1px solid $text-cl;
-        }
-        &__nav {
-            padding-bottom: 30px;
-            ul {
-                @include text(12px ,pb ,30.48px ,#9a9a9a, uppercase);
-                @include mid(true);
-                li {
-                    padding: 0 16px;
-                    &:hover {
-                        color: $text-cl;
-                    }
-                }
-            }
-        }
-        &__foot {
-            text-align: center;
-            &-text {
-                @include text(12px ,pb ,30.48px,$text-cl, uppercase)
-            }
-            &-icon {
-                a {
-                    img {
-                        width: 18px;
-                    }
-                }
-            }
-        }
-        @include xs {
-            &__nav {
-                display: none;
-            }
-            .container {
-                .objects__wrap {
-                    .object {
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+    
+    
 }

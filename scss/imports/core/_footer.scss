@@ -6,6 +6,8 @@ footer{
   .container {
     padding: 54px 20px 160px;
     .row {
+      margin-right: 0px;
+      margin-left: 0px;
       .col-6 div > span {
         @include text(12px, pb , 30.48px, $text-cl, uppercase);
         display: block;
@@ -165,6 +167,11 @@ footer{
     bottom: 0;
     z-index: -1;
   }
+  &.contact {
+    &::after {
+      height: 100%;
+    }
+  }
 
   @include xs {
     .col-6:last-child {
@@ -186,7 +193,13 @@ footer{
     }
     &::after {
       height: 245px;
-
+    }
+    &.contact {
+      .container {
+        .row {
+            display: none;
+        }
+      }
     }
   }
 }
