@@ -25,7 +25,7 @@
         <div class="container">
             <div class="header__top">
                 <div class="logo">
-                    <a href="./about.html">
+                    <a href="./index1.html">
                         <img src="./img/logo.png" alt="gbox">
                         <h1 class="hidden">wooder</h1>
                     </a>
@@ -54,39 +54,77 @@
             </div>
         </div>
     </header>
-    <main class="mainwrapper rentalpage">
-        <section class="rentals">
+    <main class="mainwrapper cafepage">
+        <section class="banner"> 
+            <div class="banner__img">
+                <img src="./img/cafe-img1.jpg" alt="">
+            </div>
+            <div class="present incafe">
+                <div class="container">
+                    <p class="present__first">WELCOME TO</p>
+                    <h2 class="present__title">GBOX COFFEE</h2>
+                    <p class="present__des incafe">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut lacus a sapien ullamcorper auctor et at magna. Pellentesque et mauris ac urna luctus
+                         suscipit quis sit amet neque. Donec at enim justo. Etiam interdum arcu lacus, sed pharetra nisi accumsan quis. Nunc facilisis varius risus aliquet
+                          sodales. Etiam aliquam maximus ultricies. Nulla varius ante vitae suscipit fermentum.
+                    </p>
+                </div>
+                <div class="present__foot">GALLERY</div>
+            </div>
+        </section>
+        <section class="gallery">
             <div class="container">
-                <div class="rentla">
-                    <div class="rental__left">
-
+                <div class="gallery__grid">
+                    <div class="gallery__carousel">
+                        <div class="carousel-img" itemscope data-pswp-uid="1">
+                            <figure class="image img1">
+                                <a href="./img/cafe-img2.jpg" data-size="343x484">
+                                    <img src="./img/cafe-img2.jpg" alt="">
+                                </a>
+                            </figure>
+                            <figure class="image img2">
+                                <a href="./img/cafe-img3.jpg" data-size="600x370">
+                                    <img src="./img/cafe-img3.jpg" alt="">
+                                </a>
+                            </figure>
+                            <figure class="image img3">
+                                <a href="./img/cafe-img4.jpg" data-size="600x414">
+                                    <img src="./img/cafe-img4.jpg" alt="">
+                                </a>
+                            </figure>
+                            <figure class="image img4">
+                                <a href="./img/cafe-img5.jpg" data-size="826x466">
+                                    <img src="./img/cafe-img5.jpg" alt="">
+                                </a>
+                            </figure>
+                            <!-- <figure class="image img5">
+                                <a href="./img/gallery-img5.jpg" data-size="772x435">
+                                    <img src="./img/gallery-img5.jpg" alt="">
+                                </a>
+                            </figure> -->
+                        </div>
                     </div>
-                    <div class="rental__right">
-                        <div class="rental__right-company">
-                            <div class="rental__title">
-
-                            </div>
-                        </div>
-                        <div class="rental__right-booking">
-                            <div class="rental__title">
-                                
-                            </div>
-                        </div>  
-
-                        <div class="booking">
-                            <div class="booking__btn">
-                                BOOK NOW
-                            </div>
-                            <div class="booking__des">
-                                <span> if you want </span>
-                                <span>booking studios</span>
-                            </div>
-                        </div>
+                    <!-- <div class="gallery__grid-item item1"><img src="./img/gallery-img1.jpg"></div>
+                    <div class="gallery__grid-item item2"><img src="./img/gallery-img2.jpg"></div>
+                    <div class="gallery__grid-item item3"><img src="./img/gallery-img3.jpg"></div>
+                    <div class="gallery__grid-item item4"><img src="./img/gallery-img4.jpg"></div>
+                    <div class="gallery__grid-item item5"><img src="./img/gallery-img5.jpg"></div> -->
+                </div>
+            </div>  
+        </section>
+        <section class="infos">
+            <div class="container">
+                <div class="info">
+                    <div class="info__title">CAREER</div>
+                    <div class="info__des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut lacus a sapien ullamcorper 
+                        auctor et at magna. Pellentesque et mauris ac urna luctus suscipit quis sit amet neque. 
+                        Donec at enim justo. Etiam interdum arcu lacus, sed pharetra nisi accumsan quis. Nunc 
+                        facilisis varius risus aliquet sodales.
                     </div>
                 </div>
             </div>
         </section>
-    </main> 
+    </main>
     <footer> 
         <div class="container">
             <div class="row">
@@ -165,6 +203,43 @@
         </div>
     </footer>
 
+     <!-- popup của thư viện photoswipe -->
+     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
 </body>

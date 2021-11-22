@@ -10,8 +10,14 @@
     @include xs {
         .objects {
             .container {
+                .objects__foot-hasinallwork {
+                    position: initial;
+                    height: initial;
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
                 .objects__foot {
-                    height: $wbtn;
+                    height: 100%;
                     position: initial;
                 }
             }

@@ -80,3 +80,115 @@
         }
     }
 }
+
+.present {
+    padding: 60px 0 0 0;
+    text-align: center;
+    position: relative;
+    @include mid();
+    &::after {
+        content: "";
+        width: 320px;
+        height: 1px;
+        background-color: $text-black-cl;
+        position: absolute;
+        left: 50%;
+        @include transform(translateX(-50%))
+    }
+    &.incafe {
+        padding: 0;
+        &::after {
+            background-color: $yellow-cl;
+        }
+        .container {
+            .present__first {
+                color: $yellow-cl;
+            }
+            .present__title {
+                color: $yellow-cl;
+                letter-spacing: 6px;
+                &::after {
+                    display: none;
+                }
+            }
+            .present__des {
+                color: $text-white-cl
+            }
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // position: relative;
+        .present__first {
+            @include text(14px, pr, 22px, $text-cl,uppercase);  
+            width: 80px;
+            // @include mid();
+            padding-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .present__title {
+            margin-bottom: 24px;
+            @include text(20px,pb,30.48px, #525355, uppercase);
+            letter-spacing: 3px;
+            position: relative;
+            z-index: 10;
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #ffde00;
+                width: 100%;
+                height: 50%;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                @include mid()
+            }
+        }   
+        .present__des {
+            @include text(12px ,pb,22px ,$text-cl,normal);
+            width: 760px;
+            margin-bottom: 50px;
+        }
+    }
+    .present__foot {
+        @include text(14px ,pr,22px ,$text-white-cl,uppercase);
+        letter-spacing: 2px;
+        position: absolute;
+        top: calc(20px + 100%);
+        left: 50%;
+        @include transform(translateX(-50%))
+    }
+    @include xs {
+
+        &.incafe {
+            &::after {
+                display: block;
+                width: 100%;
+            }
+            .container {
+                .present__des {
+                    max-width: 100%;
+                }   
+            }
+        }
+        padding: 60px 0 0 0;
+        &::after {
+            display: none;
+        }
+        .container {
+            .present__des {
+                display: none;
+                &.incafe {
+                    display: block;
+                }
+            }
+            .present__title {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+}

@@ -1,71 +1,7 @@
 // CSS HOMEPAGE
 .homepage {
-    .present {
-        padding: 60px 0 0 0;
-        text-align: center;
+    .banner {
         position: relative;
-        &::after {
-            content: "";
-            width: 320px;
-            height: 1px;
-            background-color: $text-black-cl;
-            position: absolute;
-            left: 50%;
-            @include transform(translateX(-50%))
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            // position: relative;
-            .present__first {
-                @include text(14px, pr, 22px, $text-cl,uppercase);  
-                width: 80px;
-                // @include mid();
-                padding-bottom: 30px;
-                letter-spacing: 2px;
-            }
-            .present__title {
-                margin-bottom: 62px;
-                @include text(20px,pb,30.48px, #525355, uppercase);
-                letter-spacing: 3px;
-                position: relative;
-                z-index: 10;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    background-color: #ffde00;
-                    width: 100%;
-                    height: 50%;
-                    z-index: -1;
-                    top: 0;
-                    left: 0;
-                    @include mid()
-                }
-            }   
-            .present__des {
-                @include text(12px ,pb,22px ,$text-cl,normal);
-                width: 760px;
-                margin-bottom: 24px;
-            }
-        }
-        @include xs {
-            padding: 60px 0 0 0;
-            &::after {
-                display: none;
-            }
-            .container {
-                .present__des {
-                    display: none;
-                }
-                .present__title {
-                    margin-bottom: 0;
-                }
-            }
-        }
+        height: 316px;
     }
-    
-    
-    
 }
