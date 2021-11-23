@@ -37,6 +37,16 @@ img {
             text-align: right;
         }
     }
+    &.inrental {
+        .booking__btn {
+            background-color: $gray-cl;
+            color: $yellow-cl;
+
+        }
+        .booking__des {
+            color: $text-cl;
+        }
+    }
     @include xs {
         &.inallwork {
             position: initial;
