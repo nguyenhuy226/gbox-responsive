@@ -60,3 +60,38 @@ img {
         }
     }
 }
+
+.textbox {
+    padding: 72px 0 0 20px;
+    &__box {
+        width: 120px;
+        height: 120px;
+        background-color: $yellow-cl;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+        &-text {
+            @include text(11px ,pb ,20px , $text-cl, uppercase);
+
+        }
+        &-number {
+            @include text(62.46px,DIN Bold,60px,$text-cl,normal)
+        }
+    }
+    &__text{
+      &-title {
+          @include text(32px, pb ,40.48px,$text-white-cl,normal);
+      }
+      &-des{
+          @include text(12px , pr, 20px, $text-white-cl, uppercase );
+          padding: 16px 0 10px 0;
+          letter-spacing: 2px;
+      }
+      span {
+          display: block;
+          @include text(14px , pr, 20px, $text-white-cl, uppercase );
+      }
+    }
+}

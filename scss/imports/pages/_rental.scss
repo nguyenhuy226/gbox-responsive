@@ -9,41 +9,6 @@
         max-width: 260px;
         background-color: $gray-cl;
         max-height: 640px;
-        .rental__contain {
-            padding: 72px 0 0 20px;
-        }
-        &-box {
-            width: 120px;
-            height: 120px;
-            background-color: $yellow-cl;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-        &-text {
-            @include text(11px ,pb ,20px , $text-cl, uppercase);
-
-        }
-        &-number {
-            @include text(62.46px,DIN Bold,60px,$text-cl,normal)
-        }
-        &-title {
-            @include text(32px, pb ,30.48px,$text-white-cl,normal);
-        }
-        &-des{
-            @include text(12px , pr, 30.48px, $text-white-cl, uppercase );
-            padding: 16px 0 10px 0;
-            letter-spacing: 2px;
-        }
-        &-content {
-            span {
-                display: block;
-                @include text(14px , pr, 20px, $text-white-cl, uppercase );
-            }
-            
-        }
     }
     &__right {
       .rental__title {
@@ -236,12 +201,15 @@
                   top: 0;
                   right: 12px;
                   @include mid(true);
-                  img {
-                  }
                 }
               }
               .rental__duration-icon {
                 padding: 0 34px;
+                img {
+                  width: 10px;
+                  @include transform(rotate(-180deg))
+
+                }
               }
             }
             &-input {
@@ -261,6 +229,89 @@
       }
       .booking {
         padding-top: 70px;
+      }
+    }
+    @include xs {
+      display: block; 
+      padding-bottom: 50px;
+      &__left {
+        max-width: 100%;
+        background-color: initial;
+        .rental__contain {
+          padding: 30px 0;
+          display: flex;
+        }
+        &-box {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 0;
+          margin-right: 14px;
+        }
+        &-title {
+          color: $text-cl;
+        }
+        &-des {
+            color: $text-cl;
+            padding: initial;
+        }
+        &-content {
+          span {
+
+            color: $text-cl;
+          }
+        }
+      }
+      &__right {
+        &-company {
+          padding: 0 0 30px 0;
+          .rental__right-content {
+            .rental__form {
+              .form {
+                .input {
+                  max-width: 100%;
+                  width: 100%;
+                  margin-right: initial;
+                  &.message {
+                    max-width: 100%;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-booking {
+          .rental__right-content {
+            .rental__feedbacks {
+              display: block;
+              .rental__feedback {
+                width: 100%;
+                max-width: 100%;
+                .rental__label-last {
+                  display: none;
+                }
+              }
+            }
+            .rental__duration {
+              &-content {
+                display: block;
+                .rental__input-wrap {
+                  input {
+                    width: 100%;
+                    max-width: 100%;
+                  }
+                }
+                .rental__duration-icon {
+                  padding: 15px 0;
+                  @include mid(true);
+                  img {
+                    @include transform(rotate(-90deg))
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   } 
