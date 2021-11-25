@@ -81,17 +81,33 @@ img {
         }
     }
     &__text{
+        color: $text-white-cl;
       &-title {
-          @include text(32px, pb ,40.48px,$text-white-cl,normal);
+          @include text(32px, pb ,40.48px,inherit,normal);
       }
       &-des{
-          @include text(12px , pr, 20px, $text-white-cl, uppercase );
+          @include text(12px , pb, 20px, inherit, uppercase );
           padding: 16px 0 10px 0;
           letter-spacing: 2px;
       }
       span {
           display: block;
-          @include text(14px , pr, 20px, $text-white-cl, uppercase );
+          @include text(14px , pb, 20px, inherit, uppercase );
       }
+    }
+    &.indetails {
+        padding: initial;
+        display: flex;
+        .textbox__text {
+            color: $text-cl;
+            margin-left: 80px;
+            margin-right: 110px;
+            &-des {
+                padding: 30px 0 10px 0;
+            }
+        }
+        .textbox__box {
+            margin-bottom: initial;
+        }
     }
 }

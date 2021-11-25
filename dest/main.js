@@ -180,3 +180,21 @@ $( window ).on("load", function() {
   initPhotoSwipeFromDOM('.carousel-img');
 });
 
+
+// thư viện flickity
+let $carousel = $('.slider__items');
+$carousel.flickity({
+    //options
+    cellAlign:'left',
+    contain: true,
+    wrapAround: true,
+    prevNextButtons: false,
+})
+
+$('.slider__button-prev').on('click' , function() {
+    $carousel.flickity('previous');
+    
+})
+$('.slider__button-next').on('click' , function() {
+    $carousel.flickity('next')
+})  

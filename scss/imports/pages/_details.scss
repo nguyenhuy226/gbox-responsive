@@ -1,0 +1,194 @@
+.detailspage {
+    .slider {
+        border-bottom: 1px solid #000;
+        padding-bottom: 62px;
+        .container {
+
+        }
+        &__backtoall {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 30px 0;
+            &-text {
+                @include text(12px ,pb, 24px,$text-cl,normal);
+                padding-right: 30px;
+            }
+        }
+        .slider__items {
+            .slider__item {
+                width: 100%;
+                img {
+                    @include midimg()
+                }
+            }
+        }
+        &__control {
+            display: flex;
+            padding: 0 20px;
+            .slider__wrap {
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+                @include text(12px ,pb, 20px,$text-cl,normal);
+                margin-top: 30px;
+                height: 20px;
+                &-download {
+                    display: flex;
+                    .slider__wrap-icon {  
+                        @include mid(true);
+                        padding-left: 16px;
+                    }
+                }
+                &-full {
+                    display: flex;
+                    .slider__wrap-icon {
+                        @include mid(true);
+                        padding-left: 16px;
+                    }
+                }
+                &-button {
+                    display: flex;
+                    align-items: center;
+                    .slider__button-next {
+                        display: flex;
+                        padding-left: 20px;
+                        position: relative;
+                        .slider__wrap-icon {
+                            padding-left: 16px;
+                            @include mid(true);
+                            img {
+                                width: 10px;
+                                height: 15px;
+                                @include transform(rotate(180deg))
+                            }
+                        }
+                        &::after {
+                            content: "";
+                            width: 1px;
+                            background-color: $text-black-cl;
+                            height: calc(100% - 5px);
+                            left: -0.5px;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            position: absolute;
+                        }
+                    }
+                    .slider__button-prev {
+                        display: flex;
+                        padding-right: 20px;
+                        .slider__wrap-icon {
+                            padding-right: 16px;
+                            @include mid(true);
+                            img {
+                                width: 10px;
+                                height: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .infor {
+        padding: 0 20px 70px;
+        border-bottom: 1px solid #000;
+        &__title {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            @include text(32px ,pe ,normal,$text-cl,normal) ;
+            padding: 20px 0;
+        }
+        &__note {
+            @include text(14px ,pr ,20px ,$text-cl, normal);
+            span {
+            @include text(14px ,pb,20px ,$text-cl, normal)
+            }
+        }
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 30px 0;
+            &-left {
+                .infor__items {
+                    .infor__item {
+                        display: flex;
+                        @include text(14px ,pr ,50px,$text-cl,normal);
+                        border-top: 1px solid $text-black-cl;
+                        border-left: 1px solid $text-black-cl;
+                        border-right: 1px solid $text-black-cl;
+                        &:last-child {
+                            border-bottom: 1px solid $text-black-cl;
+                        }
+                        &-text{
+                            padding-left: 60px;
+                        }
+                        &-number {
+                            flex: 1;
+                            padding-right: 20px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            &-right {
+                .infor__img {
+                    width: 270px;
+                    position: relative;
+                    &-box {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 130px;
+                        height: 106px;
+                        background-color: $yellow-cl;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        div {
+                            @include text(12px ,pe ,20px ,$text-cl,uppercase)
+                        }
+                        span {
+                            @include text(12px ,pr,20px ,$text-cl,uppercase)
+                            
+                        }
+                    }
+                    &-content {
+                        position: absolute;
+                        top: 140px;
+                        left: 40px;
+                        div {
+                            @include text(12px ,pe ,20px ,$text-white-cl,uppercase)
+                        }
+                        span {
+                            @include text(12px ,pr,20px ,$text-white-cl,uppercase)
+                            
+                        }
+                    }
+                }
+
+            }
+            .infor__text {
+                @include text(14px,pr,20px ,$text-cl,normal);
+                padding: 10px 0;
+                span {
+                    display: block;
+                    &:last-child {
+                    @include text(14px,pb,20px ,$text-cl,normal);
+
+                    }
+                }
+            }
+        }
+        &__foot {
+            @include mid(true);
+            flex-direction: column;
+            &-icon {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
