@@ -8,11 +8,11 @@ footer{
     .row {
       margin-right: 0px;
       margin-left: 0px;
-      .col-6 div > span {
+      &__left div > span {
         @include text(12px, pb , 30.48px, $text-cl, uppercase);
         display: block;
       }
-      .row-top {
+      .row__left-top {
         padding-bottom: 50px;
         height: 170px;
       }
@@ -174,12 +174,12 @@ footer{
   }
 
   @include xs {
-    .col-6:last-child {
+    .row__left:last-child {
       display: none;
     }
     .container {
       .row {
-        .row-top {
+        .row__left-top {
           padding-bottom: initial;
           height: initial;
         }

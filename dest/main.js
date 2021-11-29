@@ -198,3 +198,4 @@ $('.slider__button-prev').on('click' , function() {
 $('.slider__button-next').on('click' , function() {
     $carousel.flickity('next')
 })  
+

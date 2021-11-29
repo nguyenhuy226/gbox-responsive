@@ -77,33 +77,65 @@ img {
 
         }
         &-number {
-            @include text(62.46px,DIN Bold,60px,$text-cl,normal)
+            @include text(62.46px,DIN Bold,60px,$text-cl,normal);
         }
     }
-    &__text{
+    &__contain {
+        display: flex;
         color: $text-white-cl;
-      &-title {
-          @include text(32px, pb ,40.48px,inherit,normal);
-      }
-      &-des{
-          @include text(12px , pb, 20px, inherit, uppercase );
-          padding: 16px 0 10px 0;
-          letter-spacing: 2px;
-      }
-      span {
-          display: block;
-          @include text(14px , pb, 20px, inherit, uppercase );
-      }
+        .textbox__text{
+            flex: 1;
+            &-title {
+              @include text(32px, pb ,40.48px,inherit,normal);
+            }
+            &-des{
+                @include text(12px , pb, 20px, inherit, uppercase );
+                padding: 16px 0 10px 0;
+                letter-spacing: 2px;
+            }
+            span {
+                display: block;
+                @include text(12px , pb, 20px, inherit, uppercase );
+            }
+        }
+        .textbox__icon {
+            @include mid(true);
+            flex-direction: column;
+            padding-right: 30px;
+            &-text {
+                @include text(12px , pb,20px, inherit ,normal);
+                padding-bottom: 8px;
+            }
+        }
+
     }
     &.indetails {
         padding: initial;
         display: flex;
         .textbox__text {
             color: $text-cl;
-            margin-left: 80px;
-            margin-right: 110px;
+            padding-left: 80px;
+            padding-right: 110px;
             &-des {
                 padding: 30px 0 10px 0;
+            }
+        }
+        .textbox__box {
+            margin-bottom: initial;
+        }
+    }
+    &.instudio {
+        padding: initial;
+        display: flex;
+        .textbox__contain {
+            flex: 1;
+            color: $text-cl;
+            .textbox__text {
+                padding-left: 70px;
+                padding-right: 50px;
+                &-des {
+                    padding: 30px 0 10px 0;
+                }
             }
         }
         .textbox__box {
