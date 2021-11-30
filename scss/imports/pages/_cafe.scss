@@ -15,7 +15,10 @@
         background-color: #19191a;
         &__grid {
             padding-bottom: 135px;
+            position: relative;
             .gallery__carousel {
+                height: 500px;
+                width: 100%;
                 .carousel-img {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -53,6 +56,15 @@
                         &.img2 {
                             grid-area: 1/2/2/4; // row start / colum start / row end /colum end
                         }
+                        &.img8 {
+                            grid-area: 1/1/3/2;
+                        }
+                        &.img9 {
+                            grid-area: 1/2/3/3;
+                        }
+                        &.img12 {
+                            grid-area: 1/3/3/4;
+                        }
                         &:hover {
                             img {
         
@@ -65,7 +77,46 @@
                             }
                         }
                     }
-                    @include xs {
+                }
+            }
+            .cafe__buttonfull {
+                display: flex;
+                flex-direction: row-reverse;
+                position: absolute;
+                left: 10px;
+                bottom: 205px;
+                z-index: 10;
+                &-icon {
+                    width: 30px;
+                    height: 30px;
+                    background-color: $yellow-cl;
+                    @include mid(true)
+                }
+                &-text {
+                    @include text(12px , pr, 12px ,$text-white-cl,normal);
+                    padding-left: 10px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+            }
+            .button__control {
+                padding-top: 40px;
+                justify-content: end;
+                color: $yellow-cl;
+                &-next {
+                    &::after {
+                        background-color: $yellow-cl;
+                    }
+                }
+            }
+            @include xs {
+                padding-top: 20px;
+                .gallery__carousel {
+                    height: 740px;
+                    &.carousel-img1 {
+                        height: 570px;
+                    }
+                    .carousel-img {
                         grid-template-rows: 170px 170px 170px 170px;
                         grid-template-columns:  1fr;    
                         gap: 20px;
@@ -75,11 +126,20 @@
                                 grid-area : initial
                             }
                         }
+                        &.carousel-img1 {
+                            grid-template-rows: 170px 170px 170px ;
+                            grid-template-columns:  1fr;    
+                            gap: 20px;
+                            .image {
+                                &.img8 ,
+                                &.img9,
+                                &.img12 {
+                                    grid-area: initial;
+                                }
+                            }
+                        }
                     }
                 }
-            }
-            @include xs {
-                padding-top: 20px;
             }
         }
     }

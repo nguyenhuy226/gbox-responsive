@@ -69,7 +69,7 @@ module.exports = grunt => {
                     	'<%= dirs.dest %>/style.min.css',
 	                    '*.html',
 	                    '<%= dirs.css %>/*.css',
-	                    '<%= dirs.js %>/*.js',
+	                    '<%= dirs.dest %>/*.js',
                     ]
                 },
                 options: {

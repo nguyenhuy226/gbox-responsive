@@ -47,7 +47,7 @@
                             }
                           }
                           &.message {
-                            margin-top: 54px;
+                            margin-top: 40px;
                             width: 220px;
                             max-width: 220px;
                             height: 90px;
@@ -162,7 +162,8 @@
               
               .rental__label {
                 @include text(12px, pr,12px ,$text-cl,normal);
-                padding: 30px 0;  
+                padding: 30px 0;
+                display: block  
               }
               .rental__label-last {
                 @include text(12px, pr,12px ,$text-cl,normal);
@@ -172,6 +173,7 @@
                 resize: none;
                 border: 1px solid $text-black-cl;
                 height: 90px;
+                padding: 6px;
                 &:focus {
                   outline: none;
                 }
@@ -217,6 +219,7 @@
                 width: 518px;
                 border: 1px solid $text-black-cl;
                 height: 40px;
+                padding: 8px;
               }
               .input__label {
                 @include text(12px,pr ,12px ,$text-cl,normal);
@@ -237,27 +240,22 @@
       &__left {
         max-width: 100%;
         background-color: initial;
-        .rental__contain {
-          padding: 30px 0;
+        .textbox {
           display: flex;
-        }
-        &-box {
-          width: 100px;
-          height: 100px;
-          margin-bottom: 0;
-          margin-right: 14px;
-        }
-        &-title {
-          color: $text-cl;
-        }
-        &-des {
+          padding: 30px 0 ;
+          &__box {
+            width: 100px;
+            height: 100px;
+            margin-bottom: initial;
+            margin-right: 24px;
+          }
+          &__contain {
             color: $text-cl;
-            padding: initial;
-        }
-        &-content {
-          span {
-
-            color: $text-cl;
+            .textbox__text {
+              &-des {
+                padding: initial;
+              }
+            }
           }
         }
       }
@@ -282,6 +280,11 @@
         }
         &-booking {
           .rental__right-content {
+            .rental__control {
+              &-item {
+                margin-right: 30px;
+              }
+            }
             .rental__feedbacks {
               display: block;
               .rental__feedback {

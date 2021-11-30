@@ -112,6 +112,9 @@ img {
     &.indetails {
         padding: initial;
         display: flex;
+        .textbox__contain {
+            flex: 1;
+        }
         .textbox__text {
             color: $text-cl;
             padding-left: 80px;

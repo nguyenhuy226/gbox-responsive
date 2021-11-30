@@ -25,7 +25,7 @@
         <div class="header__top">
             <div class="container">
                 <div class="logo">
-                    <a href="./index1.html">
+                    <a href="./index.html">
                         <img src="./img/logo.png" alt="gbox">
                         <h1 class="hidden">wooder</h1>
                     </a>
@@ -39,18 +39,32 @@
         </div>
         <div class="container">
             <div class="header__menu">
-                    <ul class="header__menu-big">
-                        <li>ABOUT</li>
-                        <li>
-                            <ul>
-                                <li>STUDIO</li>
-                                <li>RENTAL</li>
-                                <li>CAFE</li>
-                                <li>WORK</li>
-                            </ul>
-                        </li>
-                        <li>CONTACT</li>
-                    </ul>
+                <ul class="header__menu-big">
+                    <li>
+                        <a href="./about.html"> ABOUT</a>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="./studio.html"> STUDIO</a>
+                            </li>
+                            <li>
+                                <a href="./rental.html"> RENTAL</a>  
+                            </li>
+                            <li>
+                                <a href="./cafe.html"> CAFE</a>
+                            </li>
+                            <li>
+                                <a href="./allwork.html"> WORK</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -77,15 +91,6 @@
                         <div class="slider__item">
                             <img src="./img/img-details4.jpg" alt="slider">
                         </div>
-                            <!-- <div> <img src="./img/news-img2.jpg" alt=""></div>
-                            <div> <img src="./img/gallery-img1.jpg" alt=""></div>
-                            <div><img src="./img/gallery-img3.jpg" alt=""></div>
-                            <div> <img src="./img/gallery-img2.jpg" alt=""></div>
-                            <div><img src="./img/news-img3.jpg" alt=""></div>
-                            <div><img src="./img/news-img1.jpg" alt=""></div>
-                            <div><img src="./img/gallery-img1.jpg" alt=""></div>
-                            <div><img src="./img/gallery-img5.jpg" alt=""></div>
-                            <div><img src="./img/gallery-img4.jpg" alt=""></div> -->
                     </div>
                     <div class="slider__control">
                         <div class="textbox indetails">
@@ -93,10 +98,12 @@
                                 <div class="textbox__box-text">STUDIO</div>
                                 <div class="textbox__box-number">01</div>
                             </div>  
-                            <div class="textbox__text">
-                                <div class="textbox__text-des">DIMENSIONS</div>
-                                <span>18mW x 18mL x 7mH</span>
-                            </div>
+                            <div class="textbox__contain">
+                                <div class="textbox__text">
+                                    <div class="textbox__text-des">DIMENSIONS</div>
+                                    <span>18mW x 18mL x 7mH</span>                                 
+                                </div>
+                            </div> 
                         </div>
                         <div class="slider__wrap">
                             <div class="slider__wrap-download">
@@ -115,20 +122,20 @@
                                     <img src="./img/full-screen.png" alt="icon plan">
                                 </div>
                             </div>
-                            <div class="slider__wrap-button">
-                                <div class="slider__button-prev">
-                                    <div class="slider__wrap-icon">
+                            <div class="button__control">
+                                <div class="button__control-prev details-prev">
+                                    <div class="button__control-icon">
                                         <img src="./img/back-to-all.png" alt="icon plan">
                                     </div>
-                                    <div class="slider__wrap-prev">
+                                    <div class="button__control-text">
                                         Previous
                                     </div>  
                                 </div>
-                                <div class="slider__button-next">
-                                    <div class="slider__wrap-text">
+                                <div class="button__control-next details-next">
+                                    <div class="button__control-text">
                                         Next
                                     </div>  
-                                    <div class="slider__wrap-icon">
+                                    <div class="button__control-icon">
                                         <img src="./img/back-to-all.png" alt="icon plan">
                                     </div>
                                 </div>
@@ -231,8 +238,8 @@
     <footer> 
         <div class="container">
             <div class="row">
-                <div class="col-6 col-sm-12 col-md-6">
-                    <div class="row-top">
+                <div class="row__left  col-sm-12 col-md-6">
+                    <div class="row__left-top">
                         <span>EMAIL</span>
                         <span>INFO@GOLDENBOXSTUDIOS.COM</span>
                         <span>TEL   +84979872809</span>
@@ -243,8 +250,8 @@
                         <span>HO CHI MINH CITY.</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-6">
-                    <div class="row-top">
+                <div class="row__left col-md-6">
+                    <div class="row__left-top">
                         <span>IF YOU HAVE ANY QUESTIONS.</span>
                         <span>COMMENTS OR</span>
                         <span>SUGGESTIONS, FEEL FREE TO EMAIL</span>

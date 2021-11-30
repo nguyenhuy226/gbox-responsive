@@ -182,20 +182,51 @@ $( window ).on("load", function() {
 
 
 // thư viện flickity
+
+// details page
 let $carousel = $('.slider__items');
 $carousel.flickity({
     //options
     cellAlign:'left',
     contain: true,
     wrapAround: true,
-    prevNextButtons: false,
+    prevNextButtons: true,
+    pageDots : false,
+    fullscreen: true,
 })
-
-$('.slider__button-prev').on('click' , function() {
+$('.slider__wrap-full').on('click', function() {
+    $carousel.flickity('viewFullscreen');
+})
+// $carousel.on( 'fullscreenChange.flickity', function( event, isFullscreen ) {...} );
+$('.details-prev').on('click' , function() {
     $carousel.flickity('previous');
     
 })
-$('.slider__button-next').on('click' , function() {
+$('.details-next').on('click' , function() {
     $carousel.flickity('next')
 })  
 
+// project page
+let $project =$('.project__items')
+
+$project.flickity({
+    cellAlign:'left',
+    contain: true,
+    wrapAround: true,
+    prevNextButtons: true,
+    pageDots : false,
+
+})
+
+// cafe page 
+
+let $cafe =$('.gallery__silder')
+
+$cafe.flickity({
+    cellAlign:'left',
+    contain: true,
+    wrapAround: true,
+    prevNextButtons: true,
+    pageDots : false,
+
+})

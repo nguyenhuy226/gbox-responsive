@@ -192,3 +192,44 @@
     }
     
 }
+
+.button__control {
+    display: flex;
+    align-items: center;
+    &-next {
+        display: flex;
+        padding-left: 20px;
+        position: relative;
+        .button__control-icon {
+            padding-left: 16px;
+            @include mid(true);
+            img {
+                width: 10px;
+                height: 15px;
+                @include transform(rotate(180deg))
+            }
+        }
+        &::after {
+            content: "";
+            width: 1px;
+            background-color: $text-black-cl;
+            height: calc(100% - 5px);
+            left: -0.5px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            position: absolute;
+        }
+    }
+    &-prev {
+        display: flex;
+        padding-right: 20px;
+        .button__control-icon {
+            padding-right: 16px;
+            @include mid(true);
+            img {
+                width: 10px;
+                height: 15px;
+            }
+        }
+    }
+}
