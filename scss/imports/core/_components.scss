@@ -200,6 +200,7 @@
         display: flex;
         padding-left: 20px;
         position: relative;
+        cursor: pointer;
         .button__control-icon {
             padding-left: 16px;
             @include mid(true);
@@ -221,6 +222,7 @@
         }
     }
     &-prev {
+        cursor: pointer;
         display: flex;
         padding-right: 20px;
         .button__control-icon {

@@ -167,5 +167,26 @@
     </footer>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
+    <script>
+
+        Validator({
+            form : '#form-footer',
+            formGroundSelector : '.input',
+            errorSelector : '.error__message',
+            rules : [
+                Validator.isRequired('#input-1'), 	
+                Validator.isRequired('#input-2'), 	
+                Validator.isEmail('#input-4'),
+                Validator.minLength('#input-3', 10),
+                Validator.isRequired('#input-3'), 	
+                // Validator.isConfirmed('#youSelf', function() {
+                //     return document.querySelector('#form-1 #password').value;
+                // }, 'nhập mật khẩu lại không chính xác')
+            ],
+            onSubmit : function (Data) {
+                console.log(Data)
+            }
+        })
+    </script>
 </body>
 </html>

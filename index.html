@@ -235,36 +235,36 @@
                     <div class="footer__form">
                         <form action="#" method="POST" class="form" id="form-footer">
                           <div class="input">
-                            <input type="text" class="input__field" id="input-1" />
-                            <label for="input-1" class="input__label">
+                            <input type="text" class="input__field" id="yourName" />
+                            <label for="yourName" class="input__label">
                               <span class="input__label-content">Your Name</span>
                             </label>
                             <span class="error-message"></span>
                           </div>
                           <div class="input">
-                            <input type="text" class="input__field" id="input-2" />
-                            <label for="input-2" class="input__label">
+                            <input type="text" class="input__field" id="subject" />
+                            <label for="subject" class="input__label">
                               <span class="input__label-content">Subject</span>
                             </label>
                             <span class="error-message"></span>
                           </div>
                           <div class="input">
-                            <input type="text" class="input__field" id="input-3" />
-                            <label for="input-3" class="input__label">
+                            <input type="text" class="input__field" id="phone" />
+                            <label for="phone" class="input__label">
                               <span class="input__label-content">Phone</span>
                             </label>
                             <span class="error-message"></span>
                           </div>
                           <div class="input">
-                            <input type="text" class="input__field" id="input-4" />
-                            <label for="input-4" class="input__label">
+                            <input type="text" class="input__field" id="email" />
+                            <label for="email" class="input__label">
                               <span class="input__label-content">Email</span>
                             </label>
                             <span class="error-message"></span>
                           </div>
                           <div class="input message">
-                            <textarea class="input__field" id="input-5"></textarea>
-                            <label for="input-5" class="input__label">
+                            <textarea class="input__field" id="message"></textarea>
+                            <label for="message" class="input__label">
                               <span class="input__label-content">Message</span>
                             </label>
                             <span class="error-message"></span>
@@ -288,6 +288,28 @@
     </footer>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
+
+    <script>
+
+        Validator({
+            form : '#form-footer',
+            formGroundSelector : '.input',
+            errorSelector : '.error__message',
+            rules : [
+                Validator.isRequired('#input-1'), 	
+                Validator.isRequired('#input-2'), 	
+                Validator.isEmail('#input-4'),
+                Validator.minLength('#input-3', 10),
+                Validator.isRequired('#input-3'), 	
+                Validator.isConfirmed('#youSelf', function() {
+                    return document.querySelector('#form-1 #password').value;
+                }, 'nhập mật khẩu lại không chính xác')
+            ],
+            onSubmit : function (Data) {
+                console.log(Data)
+            }
+        })
+    </script>
 </body>
 
 </html>
