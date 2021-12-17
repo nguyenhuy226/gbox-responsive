@@ -9,7 +9,7 @@ footer{
       margin-right: 0px;
       margin-left: 0px;
       &__left div > span {
-        @include text(12px, pb , 30.48px, $text-cl, uppercase);
+        @include text(12px, pr , 30.48px, $text-cl, uppercase);
         display: block;
       }
       .row__left-top {
@@ -51,6 +51,15 @@ footer{
               textarea {
                 border: none;
                 resize: none;
+              }
+            }
+            &.invalid {
+              .input__label {
+                &::after,
+                &::before {
+                  background-color: #ff0000;
+                }
+
               }
             }
             .input__label {
@@ -102,6 +111,7 @@ footer{
               font-size: 12px;
               color: #ff0000;
               font-style: italic;
+              font-family: pr;
             }
           }
           .send-button {
@@ -135,14 +145,14 @@ footer{
     
     .input__field:focus + .input__label::before,
     .input--filled .input__label::before {
-      -webkit-transform: translate3d(0, -0.5em, 0);
-      transform: translate3d(0, -0.5em, 0);
+      // -webkit-transform: translate3d(0, -0.5em, 0);
+      // transform: translate3d(0, -0.5em, 0);
     }
     
     .input__field:focus + .input__label::after,
     .input--filled .input__label::after {
-      -webkit-transform: translate3d(0, 0.5em, 0);
-      transform: translate3d(0, 0.5em, 0);
+      // -webkit-transform: translate3d(0, 0.5em, 0);
+      // transform: translate3d(0, 0.5em, 0);
     }
 
     .footer__bottom {
