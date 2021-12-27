@@ -129,6 +129,22 @@
                     &::after {
                         background-color: $yellow-cl;
                     }
+                    .button__control-icon {
+                        img {
+                            width: initial;
+                            height: initial;
+                            @include transform(rotate(-90deg))
+                        }
+                    }
+                }
+                &-prev {
+                    .button__control-icon {
+                        img {
+                            width: initial;
+                            height: initial;
+                            @include transform(rotate(90deg))
+                        }
+                    }
                 }
             }
             @include xs {
@@ -205,6 +221,33 @@
                     text-align: center;
                 }
             }
+        }
+    }
+}
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffde00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    .loader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: 4px solid #171717;
+        animation: loader 2s infinite ease;
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #171717;
+            animation: loader-inner 2s infinite ease-in;
         }
     }
 }

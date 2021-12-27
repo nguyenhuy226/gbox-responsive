@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Gbox CFD</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="https://www.vivosmartphone.vn/themes/vivo/favicon.ico">
     <meta name="title" content="" />
     <meta name="description" content="" />
     <!-- meta facebook -->
@@ -24,6 +25,9 @@
   <header>
     <div class="header__top">
         <div class="container">
+            <div class="menuBtn">
+                <span></span>
+            </div>
             <div class="logo">
                 <a href="./index.html">
                     <img src="./img/logo.png" alt="gbox">
@@ -31,7 +35,7 @@
                 </a>
             </div>
             <div class="logo-fb">
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100006674593759" target="_blank">
                     <img src="./img/icon-facebook.svg" alt="facebook">
                 </a>
             </div>
@@ -39,33 +43,43 @@
     </div>
     <div class="container">
         <div class="header__menu">
-          <ul class="header__menu-big">
-            <li>
-                <a href="./about.html"> ABOUT</a>
-            </li>
-            <li>
-                <ul>
+                <ul class="header__menu-big">
                     <li>
-                        <a href="./studio.html"> STUDIO</a>
+                        <a href="./about.html"> ABOUT</a>
                     </li>
                     <li>
-                        <a href="./rental.html"> RENTAL</a>  
+                        <ul>
+                            <li>
+                                <a href="./studio.html"> STUDIO</a>
+                            </li>
+                            <li>
+                                <a href="./rental.html"> RENTAL</a>  
+                            </li>
+                            <li>
+                                <a href="./cafe.html"> CAFE</a>
+                            </li>
+                            <li>
+                                <a href="./allwork.html"> WORK</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="./cafe.html"> CAFE</a>
-                    </li>
-                    <li>
-                        <a href="./allwork.html"> WORK</a>
+                        <a href="./contact.html">
+                            CONTACT
+                        </a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <a href="./contact.html">
-                    CONTACT
-                </a>
-            </li>
-        </ul>
         </div>
+    </div>
+    <div class="menu-mobile">
+        <ul class="nav">
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./studio.html">STUDIO </a></li>
+            <li><a href="./rental.html">RENTAL </a></li>
+            <li><a href="./cafe.html">CAFE </a></li>
+            <li><a href="./allwork.html">WORK </a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
     </div>
   </header>
   <main class="mainwrapper rentalpage">
@@ -89,50 +103,59 @@
                       </div>
                   </div>
                   <div class="rental__right">
+                    <form action="#" method="POST" id="form-rental" class="form__rental">
                       <div class="rental__right-company">
                           <div class="rental__title">
                               Company details
                           </div>
                           <div class="rental__right-content">
                               <div class="rental__form">
-                                  <form action="#" method="POST" class="form" id="form-footer">
-                                    <div class="input">
-                                      <input type="text" class="input__field" id="input-1" />
+                                  <div class="form">
+                                    <div class="input input-ground">
                                       <label for="input-1" class="input__label">
                                         <span class="input__label-content">Company Name: *</span>
                                       </label>
+                                      <input type="text" class="input__field" id="input-1" />
+                                      <span class="rental-message"></span>
                                     </div>
-                                    <div class="input">
-                                      <input type="text" class="input__field" id="input-2" />
+                                    <div class="input input-ground">
+                                      <label for="input-3" class="input__label">
+                                        <span class="input__label-content">Contact Name: *</span>
+                                      </label>  
+                                      <input type="text" class="input__field" id="input-3" />
+                                      <span class="rental-message"></span>                                     
+                                    </div>
+                                    <div class="input input-ground">
+                                      <label for="input-5" class="input__label">
+                                        <span class="input__label-content">Phone: *</span>
+                                      </label>   
+                                      <input type="number" class="input__field" id="input-5" />
+                                      <span class="rental-message"></span>                                   
+                                    </div>
+                                  </div>
+                                  <div class="form">
+                                    <div class="input input-ground">
                                       <label for="input-2" class="input__label">
                                         <span class="input__label-content">E-mail: *</span>
                                       </label>
+                                      <input type="text" class="input__field" id="input-2" />
+                                      <span class="rental-message"></span>
                                     </div>
-                                    <div class="input">
-                                      <input type="text" class="input__field" id="input-3" />
-                                      <label for="input-3" class="input__label">
-                                        <span class="input__label-content">Contact Name: *</span>
-                                      </label>                                       
-                                    </div>
-                                    <div class="input">
-                                      <input type="text" class="input__field" id="input-4" />
+                                    <div class="input input-ground">
                                       <label for="input-4" class="input__label">
                                         <span class="input__label-content">Accounts payable contact: *</span>
-                                      </label>                                      
+                                      </label>   
+                                      <input type="text" class="input__field" id="input-4" />
+                                      <span class="rental-message"></span>                                   
                                     </div>
-                                    <div class="input">
-                                      <input type="text" class="input__field" id="input-5" />
-                                      <label for="input-5" class="input__label">
-                                        <span class="input__label-content">Phone: *</span>
-                                      </label>                                      
-                                    </div>
-                                    <div class="input message">
-                                      <textarea class="input__field message" id="input-6"></textarea>
+                                    <div class="input message input-ground">
                                       <label for="input-6" class="input__label">
                                         <span class="input__label-content">Company Address: *</span>
                                       </label>
+                                      <textarea class="input__field message" id="input-6"></textarea> 
+                                      <span class="rental-message"></span>
                                     </div>
-                                  </form>
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -153,51 +176,51 @@
                                   </div>
                               </div>
                               <div class="rental__feedbacks">
-                                  <div class="rental__feedback">
+                                  <div class="rental__feedback input-ground">
                                       <label for="input-7" class="rental__label">Catering requirement:</label>
                                       <textarea class="input__field" id="input-7"></textarea>
+                                      <span class="rental-message"></span>
                                   </div>
-                                  <div class="rental__feedback"> 
+                                  <div class="rental__feedback input-ground"> 
                                       <label for="input-8" class="rental__label">Lighting requirements:</label>
                                       <textarea class="input__field " id="input-8"></textarea>
                                       <div class="rental__label-last">Please note: All lighting hire to go through Gbox Studios</div>
+                                      <span class="rental-message"></span>
                                   </div>
                               </div>
                               <div class="rental__duration">
                                   <div class="rental__label">Booking duration</div>
                                   <div class="rental__duration-content">
-                                      <div class="rental__input-wrap">
-                                        <input type="text" class="input__field" id="input-9" />
-                                        <div class="rental__input-icon">
-                                          <img src="./img/icon-rental.png" alt="">
-                                        </div>
+                                      <div class="rental__input-wrap input-ground">
+                                        <input type="date" class="input__field" id="input-9" />
+                                        <span class="rental-message"></span>
                                       </div>
                                       <div class="rental__duration-icon">
                                         <img  src="./img/back-to-all.png" alt="arrowright ">
                                       </div>
-                                      <div class="rental__input-wrap">
-                                        <input type="text" class="input__field" id="input-10" />
-                                        <div class="rental__input-icon">
-                                          <img src="./img/icon-rental.png" alt="">
-                                        </div>
+                                      <div class="rental__input-wrap input-ground">
+                                        <input type="date" class="input__field" id="input-10" />
+                                        <span class="rental-message"></span>
                                       </div>
                                   </div>
-                                  <div class="rental__duration-input">
+                                  <div class="rental__duration-input input-ground">
                                     <label for="input-11" class="input__label">
                                       <span class="input__label-content">Project reference</span>
                                     </label>
                                       <input type="text" class="input__field" id="input-11" />
-                                    </div>
-                                  <div class="rental__duration-input">
+                                      <span class="rental-message"></span>
+                                  </div>
+                                  <div class="rental__duration-input input-ground">
                                     <label for="input-12" class="input__label">
                                       <span class="input__label-content">where did you here about us</span>
                                     </label>
                                       <input type="text" class="input__field" id="input-12" />
+                                      <span class="rental-message"></span>
                                   </div>
                               </div>
                           </div>
                       </div>  
-                      <div class="booking inrental">
+                      <button class="booking inrental">
                           <div class="booking__btn">
                               BOOK NOW
                           </div>
@@ -205,7 +228,8 @@
                               <span>By submitting this form i agree to </span>
                               <span>Gbox studio's Team & Conditions</span>
                           </div>
-                      </div>
+                      </button>
+                    </form>
                   </div>
               </div>
           </div>
@@ -235,45 +259,45 @@
                 </div>
 
                 <div class="footer__form">
-                    <form action="#" method="POST" class="form" id="form-footer">
-                      <div class="input">
-                        <input type="text" class="input__field" id="input-13" />
-                        <label for="input-13" class="input__label">
-                          <span class="input__label-content">Your Name</span>
-                        </label>
-                        <span class="error-message"></span>
-                      </div>
-                      <div class="input">
-                        <input type="text" class="input__field" id="input-14" />
-                        <label for="input-14" class="input__label">
-                          <span class="input__label-content">Subject</span>
-                        </label>
-                        <span class="error-message"></span>
-                      </div>
-                      <div class="input">
-                        <input type="text" class="input__field" id="input-15" />
-                        <label for="input-15" class="input__label">
-                          <span class="input__label-content">Phone</span>
-                        </label>
-                        <span class="error-message"></span>
-                      </div>
-                      <div class="input">
-                        <input type="text" class="input__field" id="input-16" />
-                        <label for="input-16" class="input__label">
-                          <span class="input__label-content">Email</span>
-                        </label>
-                        <span class="error-message"></span>
-                      </div>
-                      <div class="input message">
-                        <textarea class="input__field" id="input-17"></textarea>
-                        <label for="input-17" class="input__label">
-                          <span class="input__label-content">Message</span>
-                        </label>
-                        <span class="error-message"></span>
-                      </div>
-                      <button class="send-button">Send</button>
-                    </form>
-                </div>
+                  <form action="#" method="POST" class="form" id="form-footer">
+                    <div class="input">
+                      <input type="text" class="input__field" name="yourName" id="yourName" />
+                      <label for="yourName" class="input__label">
+                        <span class="input__label-content">Your Name</span>
+                      </label>
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="input">
+                      <input type="text" class="input__field" name="subject" id="subject" />
+                      <label for="subject" class="input__label">
+                        <span class="input__label-content">Subject</span>
+                      </label>
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="input">
+                      <input type="text" class="input__field" name="phone" id="phone" />
+                      <label for="phone" class="input__label">
+                        <span class="input__label-content">Phone</span>
+                      </label>
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="input">
+                      <input type="text" class="input__field" name="email" id="email" />
+                      <label for="email" class="input__label">
+                        <span class="input__label-content">Email</span>
+                      </label>
+                      <span class="error-message"></span>
+                    </div>
+                    <div class="input message">
+                      <textarea class="input__field" name="message" id="message"></textarea>
+                      <label for="message" class="input__label">
+                        <span class="input__label-content">Message</span>
+                      </label>
+                      <span class="error-message"></span>
+                    </div>
+                    <button class="send-button">Send</button>
+                  </form>
+              </div>
             </div>
         </div>
         <div class="footer__bottom">
@@ -288,27 +312,62 @@
         </div>
     </div>
   </footer>
+  <div class="loader-wrapper" >
+    <span class="loader">
+        <span class="laoder-inner"></span>
+    </span>
+  </div>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
 
     <script>
-
+//validate form main
       Validator({
-          form : '#form-footer',
-          formGroundSelector : '.input',
-          errorSelector : '.error__message',
+          form : '#form-rental',
+          formGroundSelector : '.input-ground',
+          errorSelector : '.rental-message',
           rules : [
-              Validator.isRequired('#input-1'), 	
-              Validator.isRequired('#input-2'), 	
-              Validator.isEmail('#input-4'),
-              Validator.minLength('#input-3', 10),
-              Validator.isRequired('#input-3'), 	
-              // Validator.isConfirmed('#youSelf', function() {
-              //     return document.querySelector('#form-1 #password').value;
-              // }, 'nhập mật khẩu lại không chính xác')
+              Validator.isRequired('#input-1' , 'vui lòng nhập tên công ty'), 	
+              Validator.isRequired('#input-2' ,'vui lòng nhập email'), 	
+              Validator.isEmail('#input-2','email không đúng đinh dạng'),
+              Validator.isRequired('#input-3','vui lòng nhập học và tên'), 	
+              Validator.isRequired('#input-4', 'vui lòng nhập tài khoản thanh toán'), 	
+              Validator.isRequired('#input-5' ,'vui lòng nhập số điện thoại'), 	
+              Validator.isPhone('#input-5', 10 , 'Số điện thoại không đúng'),
+              Validator.isRequired('#input-6' ,'vui lòng nhập địa chỉ công ty'), 	
+              Validator.isRequired('#input-7' ,'vui lòng nhập yêu cầu về ăn uống'), 	
+              Validator.isRequired('#input-8' ,'vui lòng nhập yêu cầu về ánh sáng'), 	
+              Validator.isRequired('#input-9' ,'vui lòng nhập thời gian đặt trước'), 	
+              Validator.isRequired('#input-10' ,'vui lòng nhập thời gian đặt trước'), 	
+              Validator.isRequired('#input-11' ,'vui lòng nhập dự án'), 	
+              Validator.isRequired('#input-12' ,'vui lòng nhập trường này'), 	
           ],
           onSubmit : function (Data) {
               console.log(Data)
+              document.querySelector('#form-rental').reset()
+          }
+      })
+
+
+
+
+      // validate footer
+      Validator({
+          form : '#form-footer',
+          formGroundSelector : '.input',
+          errorSelector : '.error-message',
+          rules : [
+              Validator.isRequired('#yourName' , 'vui lòng nhập tên'), 	
+              Validator.isRequired('#subject' ,'vui lòng nhập chủ thể'), 	
+              Validator.isRequired('#email','vui lòng nhập email'), 	
+              Validator.isEmail('#email','email không đúng đinh dạng'),
+              Validator.isRequired('#phone', 'vui lòng nhập số điện thoại'), 	
+              Validator.isPhone('#phone', 10 , 'Số điện thoại không đúng'),
+              Validator.isRequired('#message' ,'vui lòng nhập yêu cầu'), 	
+          ],
+          onSubmit : function (Data) {
+              console.log(Data)
+              document.querySelector('#form-footer').reset()
           }
       })
   </script>

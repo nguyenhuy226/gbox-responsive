@@ -188,7 +188,7 @@
 	overflow: hidden;
 }
 
-@mixin customscroll($width: 5px, $bgTrack: #000, $bgThumb: #ddd) {
+@mixin customscroll($width: 5px, $bgTrack: #fff, $bgThumb: #ffde00) {
 	&::-webkit-scrollbar {
 		width: $width;
 	}

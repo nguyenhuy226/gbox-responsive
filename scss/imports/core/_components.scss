@@ -5,9 +5,34 @@
         padding-bottom: 50px;
         border-bottom: 1px solid $text-cl;
     }
-    &__wrap {
+    &__wrap {   
         .object {
-
+            &__img {
+                a {
+                    width: 100%;
+                    min-height: 188.98px;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    display: block;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        min-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                        @include transform(translate(-50% ,-50%) scale(1));
+                        @include transition($t)
+                    }
+                }
+                &:hover {
+                    img {
+                        @include transform(translate(-50% ,-50%) scale(1.08));
+                        @include transition($t)
+                    }
+                }
+            }
             &__text {
                 text-align: center;
                 padding-bottom: 70px;
@@ -26,7 +51,7 @@
                     }
                 }
                 &-des {
-                    @include text(12px ,pb, 20px, $text-cl, normal)
+                    @include text(12px ,pr, 20px, $text-cl, normal)
                 }
             }
         }
@@ -72,6 +97,11 @@
         .container {
             .objects__wrap {
                 .object {
+                    &__img {
+                        a {
+                            height: 313.64px;   
+                        }
+                    }
                     img {
                         width: 100%;
                     }

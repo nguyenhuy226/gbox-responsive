@@ -26,6 +26,9 @@
     <header>
         <div class="header__top">
             <div class="container">
+                <div class="menuBtn">
+                    <span></span>
+                </div>
                 <div class="logo">
                     <a href="./index.html">
                         <img src="./img/logo.png" alt="gbox">
@@ -33,7 +36,7 @@
                     </a>
                 </div>
                 <div class="logo-fb">
-                    <a href="#">
+                    <a href="https://www.facebook.com/profile.php?id=100006674593759" target="_blank">
                         <img src="./img/icon-facebook.svg" alt="facebook">
                     </a>
                 </div>
@@ -69,6 +72,16 @@
                     </ul>
             </div>
         </div>
+        <div class="menu-mobile">
+            <ul class="nav">
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./studio.html">STUDIO </a></li>
+                <li><a href="./rental.html">RENTAL </a></li>
+                <li><a href="./cafe.html">CAFE </a></li>
+                <li><a href="./allwork.html">WORK </a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </div>
     </header>
     <main class="mainwrapper homepage">
         <section class="banner">
@@ -96,10 +109,12 @@
                 </div>
                 <div class="objects__wrap">
                     <div class="row">
-                        <div class="col-4 col-sm-12 col-md-4 ">
+                        <div class="col-4 col-sm-12 col-md-4">
                             <div class="object">
                                 <div class="object__img">
-                                    <img src="./img/layer1.jpg" alt="wooder">
+                                    <a href="./project.html">
+                                        <img src="./img/layer1.jpg" alt="object">
+                                    </a>
                                 </div>
                                 <div class="object__text">
                                     <div class="object__text-title">
@@ -115,7 +130,9 @@
                         <div class="col-4 col-sm-12 col-md-4">
                             <div class="object">
                                 <div class="object__img">
-                                    <img src="./img/layer2.jpg" alt="wooder">
+                                    <a href="./project.html">
+                                        <img src="./img/layer2.jpg" alt="object">
+                                    </a>
                                 </div>
                                 <div class="object__text">
                                     <div class="object__text-title">
@@ -131,7 +148,9 @@
                         <div class="col-4 col-sm-12 col-md-4">
                             <div class="object">
                                 <div class="object__img">
-                                    <img src="./img/layer3.jpg" alt="wooder">
+                                    <a href="./project.html">
+                                        <img src="./img/layer3.jpg" alt="object">
+                                    </a>
                                 </div>
                                 <div class="object__text">
                                     <div class="object__text-title">
@@ -149,7 +168,9 @@
                         <div class="col-4 col-sm-12 col-md-4">
                             <div class="object">
                                 <div class="object__img">
-                                    <img src="./img/layer4.jpg" alt="wooder">
+                                    <a href="./project.html">
+                                        <img src="./img/layer4.jpg" alt="object">
+                                    </a>
                                 </div>
                                 <div class="object__text">
                                     <div class="object__text-title">
@@ -165,7 +186,9 @@
                         <div class="col-4 col-sm-12 col-md-4">
                             <div class="object">
                                 <div class="object__img">
-                                    <img src="./img/layer5.jpg" alt="wooder">
+                                    <a href="./project.html">
+                                        <img src="./img/layer5.jpg" alt="object">
+                                    </a>
                                 </div>
                                 <div class="object__text">
                                     <div class="object__text-title">
@@ -181,7 +204,9 @@
                         <div class="col-4 col-sm-12 col-md-4">
                             <div class="object">
                                 <div class="object__img">
-                                    <img src="./img/layer6.jpg" alt="wooder">
+                                    <a href="./project.html">
+                                        <img src="./img/layer6.jpg" alt="object">
+                                    </a>
                                 </div>
                                 <div class="object__text">
                                     <div class="object__text-title">
@@ -201,7 +226,7 @@
                         ALL WORKS
                     </div>
                     <div class="objects__foot-icon">
-                        <a href="#">
+                        <a href="./allwork.html">
                             <img src="./img/arrow-down.png" alt="more">
                         </a>
                     </div>
@@ -286,6 +311,11 @@
             </div>
         </div>
     </footer>
+    <div class="loader-wrapper" >
+        <span class="loader">
+            <span class="laoder-inner"></span>
+        </span>
+    </div>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
 
@@ -296,13 +326,13 @@
             formGroundSelector : '.input',
             errorSelector : '.error-message',
             rules : [
-                Validator.isRequired('#yourName'), 	
-                Validator.isRequired('#subject'), 	
-                Validator.isRequired('#email'), 	
-                Validator.isEmail('#email'),    
-                Validator.isRequired('#phone'), 	
-                Validator.isPhone('#phone', 10),
-                Validator.isRequired('#message'), 	
+                Validator.isRequired('#yourName' , 'vui lòng nhập tên'), 	
+                Validator.isRequired('#subject' ,'vui lòng nhập chủ thể'), 	
+                Validator.isRequired('#email','vui lòng nhập email'), 	
+                Validator.isEmail('#email','email không đúng đinh dạng'),
+                Validator.isRequired('#phone', 'vui lòng nhập số điện thoại'), 	
+                Validator.isPhone('#phone', 10 , 'Số điện thoại không đúng'),
+                Validator.isRequired('#message' ,'vui lòng nhập yêu cầu'), 	
             ],
             onSubmit : function (Data) {
                 console.log(Data)

@@ -11,227 +11,317 @@
         max-height: 640px;
     }
     &__right {
-      .rental__title {
-          @include text(28px ,pb,30.48px, $text-cl,normal)
-      }
-      &-company {
-        padding: 70px 0 50px 0;
-        .rental__right-content {
-                .rental__form {
+      .form__rental {
+        .rental__title {
+            @include text(28px ,pb,30.48px, $text-cl ,normal)
+        }
+        
+        .rental__right-company {
+          padding: 70px 0 50px 0;
+          .rental__right-content {
+                  .rental__form {
+                    margin-top: 30px;
+                    display: flex;
                     .form {
-                        display: flex;
-                        flex-wrap: wrap;
-                        // justify-content: center;
-                        align-content: center;
-                        .input {
-                          position: relative;
-                          margin-right: 77px;
-                          width: 220px; 
-                          max-width: 220px;
-                          height: 60px;
-                          &__field {
-                            position: absolute;
-                            margin: 0.8rem 0;
-                            padding: 0.4em;
-                            width: 100%;
-                            height: calc(100% - 1.6em);
-                            border: none;
-                            border-radius: 0;
-                            background: transparent;
-                            color: #171717;
-                            font-size: 12px;
-                            // font-weight: $font-normal;
-                            -webkit-appearance: none;
-                            &:focus {
-                              outline: none;
-                            }
-                          }
-                          &.message {
-                            margin-top: 40px;
-                            width: 220px;
+                          // display: flex;
+                          // flex-wrap: wrap;
+                          // justify-content: center;
+                          // align-content: center;
+                          .input {
+                            // position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            margin-right: 77px;
+                            width: 220px; 
                             max-width: 220px;
-                            height: 90px;
-                            textarea {
-                              border: 1px solid $text-cl;
-                              resize: none;
-                            }
-                            .input__label {
-                              &::after,
-                              &::before {
-                                display: none;
+                            margin-bottom: 20px;
+                            // height: 60px;
+                            &.invalid {
+                              .rental-message {
+                                display: block;
                               }
-                              &-content {
+                            }
+                            &__field {
+                              // position: absolute;
+                              // margin: 0.8rem 0;
+                              position: relative;
+                              padding: 0.4em;
+                              width: 100%;
+                              height: 30px;
+                              border-top: none;
+                              border-left: none;
+                              border-right: none;
+                              border-bottom: 1px solid #171717;
+                              border-radius: 0;
+                              background: transparent;
+                              color: #171717;
+                              font-size: 12px;
+                              // // font-weight: $font-normal;
+                              -webkit-appearance: none;
+                              &:focus {
+                                outline: none;
+                              }
+                              &::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                width: 100%;
+                                height: 1px;
+                                background: #171717;
+                                // -webkit-transition: -webkit-transform 0.3s;
+                                // transition: transform 0.3s;
+                                bottom: 0;
+                              }
+                            }
+                            &.message {
+                              // margin-top: 40px;
+                              width: 220px;
+                              max-width: 220px;
+                              margin: 0;
+                              textarea {
+                                margin-top: 35px;
+                                min-height: 90px;
+                                border: 1px solid $text-cl;
+                                resize: none;
+                              }
+                              .input__label {
+                                &::after,
+                                &::before {
+                                  display: none;
+                                }
+                                &-content {
+                                  // -webkit-transform: translate3d(0, -100%, 0);
+                                  // transform: translate3d(0, -100%, 0);
+                                }
+                              }
+                              .input__field:focus + .input__label .input__label-content,
+                              .input--filled .input__label-content {
                                 -webkit-transform: translate3d(0, -100%, 0);
                                 transform: translate3d(0, -100%, 0);
                               }
                             }
-                            .input__field:focus + .input__label .input__label-content,
-                            .input--filled .input__label-content {
-                              -webkit-transform: translate3d(0, -100%, 0);
-                              transform: translate3d(0, -100%, 0);
+                            &__label {
+                              // position: absolute;
+                              // margin: 1.2em 0;
+                              // width: 100%;
+                              color: #171717;
+                              font-family: "pr";
+                              font-size: 12px;
+                              -webkit-font-smoothing: antialiased;
+                              -moz-osx-font-smoothing: grayscale;
+                              -webkit-touch-callout: none;
+                              -webkit-user-select: none;
+                              -khtml-user-select: none;
+                              -moz-user-select: none;
+                              -ms-user-select: none;
+                              user-select: none;
+                              &-content {
+                                // position: relative;
+                                display: block;
+                                // padding: 1em 0;
+                                width: 100%;
+                                -webkit-transition: -webkit-transform 0.3s;
+                                transition: transform 0.3s;
+                              }
                             }
-                          }
-                          &__label {
-                            position: absolute;
-                            margin: 1.2em 0;
-                            width: 100%;
-                            color: #171717;
-                            font-family: "pr";
-                            font-size: 12px;
-                            -webkit-font-smoothing: antialiased;
-                            -moz-osx-font-smoothing: grayscale;
-                            -webkit-touch-callout: none;
-                            -webkit-user-select: none;
-                            -khtml-user-select: none;
-                            -moz-user-select: none;
-                            -ms-user-select: none;
-                            user-select: none;
-                            &-content {
-                              position: relative;
-                              display: block;
-                              padding: 1em 0;
-                              width: 100%;
-                              -webkit-transition: -webkit-transform 0.3s;
-                              transition: transform 0.3s;
+                            .rental-message {
+                              // display: flex;
+                              // height: 100%;
+                              // align-items: flex-end;
+                              // margin-top: 20px;
+                              display: none;
+                              font-size: 12px;
+                              color: #ff0000;
+                              font-style: italic;
+                              font-family: pr;
+                              text-transform: lowercase;
+                              // padding: 5px 0 20px;
+                              padding: 5px 0 0 0;
                             }
-                            &::after {
-                              content: "";
-                              position: absolute;
-                              left: 0;
-                              width: 100%;
-                              height: 1px;
-                              background: #171717;
-                              -webkit-transition: -webkit-transform 0.3s;
-                              transition: transform 0.3s;
-                              bottom: 0;
-                          }
                         }
-                      }
-                  }
-                  .input__field:focus + .input__label .input__label-content,
-                  .input--filled .input__label-content {
-                    -webkit-transform: translate3d(0, -70%, 0);
-                    transform: translate3d(0, -70%, 0);
-                  }
-                  
-                  // .input__field:focus + .input__label::before,
-                  // .input--filled .input__label::before {
-                  //   -webkit-transform: translate3d(0, -0.5em, 0);
-                  //   transform: translate3d(0, -0.5em, 0);
-                  // }
-                  
-                  .input__field:focus + .input__label::after,
-                  .input--filled .input__label::after {
-                    -webkit-transform: translate3d(0, 0.5em, 0);
-                    transform: translate3d(0, 0.5em, 0);
-                  }
-            }
+                    }
+                    // .input__field:focus + .input__label .input__label-content,
+                    // .input--filled .input__label-content {
+                    //   -webkit-transform: translate3d(0, -70%, 0);
+                    //   transform: translate3d(0, -70%, 0);
+                    // }
+                    
+                    // .input__field:focus + .input__label::before,
+                    // .input--filled .input__label::before {
+                    //   -webkit-transform: translate3d(0, -0.5em, 0);
+                    //   transform: translate3d(0, -0.5em, 0);
+                    // }
+                    
+                    // .input__field:focus + .input__label::after,
+                    // .input--filled .input__label::after {
+                    //   -webkit-transform: translate3d(0, 0.5em, 0);
+                    //   transform: translate3d(0, 0.5em, 0);
+                    // }
+              }
+          }
         }
-      }
-      &-booking {
-        .rental__right-content {
-          .rental__label {
-            @include text(12px,pr ,66px ,$text-cl,normal);
-          }
-          .rental__control {
-            &-items {
-              display: flex;
+        .rental__right-booking {
+          .rental__right-content {
+            .rental__label {
+              @include text(12px,pr ,66px ,$text-cl,normal);
             }
-            &-item {
-              width: 40px;
-              height: 40px;
-              background-color: #111111;
-              color: #b4b4b4;
-              @include text(24px, DIN Bold, 30px,#b4b4b4,normal);
-              @include mid(true);
-              margin-right: 20px;
-              border: 1px solid #464646;
-              &:hover {
-                color: $text-cl;
-                background-color: $yellow-cl;
-
+            .rental__control {
+              &-items {
+                display: flex;
               }
-            }
-          }
-          .rental__feedbacks {
-            display: flex;
-            .rental__feedback {
-              width: 220px;
-              max-width: 220px;
-              margin-right: 77px;
-              
-              .rental__label {
-                @include text(12px, pr,12px ,$text-cl,normal);
-                padding: 30px 0;
-                display: block  
-              }
-              .rental__label-last {
-                @include text(12px, pr,12px ,$text-cl,normal);
-              }
-              .input__field {
-                width: 100%;
-                resize: none;
-                border: 1px solid $text-black-cl;
-                height: 90px;
-                padding: 6px;
-                &:focus {
-                  outline: none;
+              &-item {
+                width: 40px;
+                height: 40px;
+                background-color: #111111;
+                color: #b4b4b4;
+                @include text(24px, DIN Bold, 30px,#b4b4b4,normal);
+                @include mid(true);
+                margin-right: 20px;
+                border: 1px solid #464646;
+                &:hover {
+                  color: $text-cl;
+                  background-color: $yellow-cl;
+  
                 }
-      
               }
             }
-          }
-          .rental__duration {
-            &-content {
+            .rental__feedbacks {
               display: flex;
-              align-items: center;
-              .rental__input-wrap {
-                position: relative;
-                input {
-                  width: 220px;
-                  max-width: 220px;
-                  height: 40px;
+              .rental__feedback {
+                width: 220px;
+                max-width: 220px;
+                margin-right: 77px;
+                &.invalid {
+                  .rental-message {
+                    display: block;
+                  }
+                }
+                .rental__label {
+                  @include text(12px, pr,12px ,$text-cl,normal);
+                  padding: 30px 0;
+                  display: block  
+                }
+                .rental__label-last {
+                  @include text(12px, pr,12px ,$text-cl,normal);
+                }
+                .input__field {
+                  width: 100%;
+                  resize: none;
                   border: 1px solid $text-black-cl;
-                  position: relative;
+                  height: 90px;
+                  padding: 6px;
                   &:focus {
                     outline: none;
                   }
                 }
-                .rental__input-icon { 
-                  position: absolute;
-                  height: 100%;
-                  top: 0;
-                  right: 12px;
-                  @include mid(true);
+                .rental-message {
+                  // display: flex;
+                  // height: 100%;
+                  // align-items: flex-end;
+                  display: none;
+                  font-size: 12px;
+                  color: #ff0000;
+                  font-style: italic;
+                  font-family: pr;
+                  text-transform: lowercase;
+                  padding: 5px 0 0 0;
                 }
               }
-              .rental__duration-icon {
-                padding: 0 34px;
-                img {
-                  width: 10px;
-                  @include transform(rotate(-180deg))
+            }
+            .rental__duration {
+              &-content {
+                display: flex;
+                align-items: center;
+                .rental__input-wrap {
+                  position: relative;
+                  &.invalid {
+                    .rental-message {
+                      display: block;
+                    }
+                  }
+                  input {
+                    width: 220px;
+                    max-width: 220px;
+                    height: 40px;
+                    border: 1px solid $text-black-cl;
+                    position: relative;
+                    &:focus {
+                      outline: none;
+                    }
+                  }
 
+                  .rental-message {
+                    // display: flex;
+                    // height: 100%;
+                    // align-items: flex-end;
+                    // margin-top: 20px;
+                    display: none;
+                    font-size: 12px;
+                    color: #ff0000;
+                    font-style: italic;
+                    font-family: pr;
+                    text-transform: lowercase;
+                    // padding: 5px 0 20px;
+                    padding: 5px 0 0 0;
+                  }
+                  .rental__input-icon { 
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    right: 12px;
+                    @include mid(true);
+                  }
+                }
+                .rental__duration-icon {
+                  padding: 0 34px;
+                  img {
+                    width: 10px;
+                    @include transform(rotate(-180deg))
+  
+                  }
                 }
               }
-            }
-            &-input {
-              .input__field {
-                width: 518px;
-                border: 1px solid $text-black-cl;
-                height: 40px;
-                padding: 8px;
+              &-input {
+                &.invalid {
+                  .rental-message {
+                    display: block;
+                  }
+                }
+                .input__field {
+                  width: 518px;
+                  border: 1px solid $text-black-cl;
+                  height: 40px;
+                  padding: 8px;
+                  outline: none
+                }
+                .input__label {
+                  @include text(12px,pr ,12px ,$text-cl,normal);
+                  display: block;
+                  padding: 20px 0;
+                } 
+                .rental-message {
+                  // display: flex;
+                  // height: 100%;
+                  // align-items: flex-end;
+                  // margin-top: 20px;
+                  display: none;
+                  font-size: 12px;
+                  color: #ff0000;
+                  font-style: italic;
+                  font-family: pr;
+                  text-transform: lowercase;
+                  // padding: 5px 0 20px;
+                  padding: 5px 0 0 0;
+                }
               }
-              .input__label {
-                @include text(12px,pr ,12px ,$text-cl,normal);
-                display: block;
-                padding: 20px 0;
-              } 
-            }
-          } 
+            } 
+          }
         }
-      }
-      .booking {
-        padding-top: 70px;
+        .booking {
+          padding-top: 70px;
+          border: none;
+          background-color: transparent;
+        }
       }
     }
     @include xs {
@@ -318,4 +408,31 @@
       }
     }
   } 
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffde00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #171717;
+    animation: loader 2s infinite ease;
+    .loader-inner {
+        vertical-align: top;
+        display: inline-block;
+        width: 100%;
+        background-color: #171717;
+        animation: loader-inner 2s infinite ease-in;
+    }
+}
 }

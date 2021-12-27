@@ -9,13 +9,14 @@ img {
         width: $wbtn;
         height: $wbtn;
         background-color: $yellow-cl;
+        text-decoration: none;
         border-radius: 10px;
         @include mid(true);
         padding: 26px 16px;
         @include text(24px ,pb ,30.48px,$text-cl,uppercase)
     }
     &__des {
-        @include text( 14px, pb , 20px ,$text-white-cl,normal);
+        @include text( 14px, pr , 20px ,$text-white-cl,normal);
         padding-left: 18px;
         padding-right: 18px;
         span {
@@ -95,7 +96,7 @@ img {
             }
             span {
                 display: block;
-                @include text(12px , pb, 20px, inherit, uppercase );
+                @include text(12px , pr, 20px, inherit, uppercase );
             }
         }
         .textbox__icon {

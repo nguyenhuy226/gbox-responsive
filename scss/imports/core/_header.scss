@@ -6,8 +6,56 @@ header {
     .header__top {
         background-color: $gray-cl;
         height: 70px; 
+        // position: fixed;
+        z-index: 10;
         .container {
             position: relative;
+            .menuBtn {
+                width: 40px;
+                display: none;
+                height: 22px;
+                // position: relative;
+                position: absolute;
+                cursor: pointer;
+                z-index: 300;
+                top: 50%;
+                @include transform(translateY(-50%));
+                span {
+                    width: 100%;
+                    height: 3px;  
+                    background: $yellow-cl;
+                    @include mid(); 
+                    @include transition(0.3s)
+                }
+                &::before,&::after {
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    display: block;
+                    background: $yellow-cl;
+                    @include transform(rotate(0deg) translateY(0px));
+                    @include transition(transform 0.3s)
+                }
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                }
+                &.active {
+                    &::before {
+                        @include transform(rotate(45deg) translate(6px, 8px));
+                        @include transition(transform 0.3s ease-in-out)
+                    }
+                    &::after {
+                        @include transform(rotate(-45deg) translate(6px, -8px));
+                        @include transition(transform 0.3s ease-in-out)
+                    }
+                    span {
+                        opacity: 0;
+                        @include transition(0.3s ease-in-out);                     
+                        left: -60px;
+                    }
+                }
+            }
             .logo {
                 @include mid(true);
                 height: 100%;
@@ -34,6 +82,7 @@ header {
         height: 100%;
         .header__menu {
             @include text(12px, pb,30.48px, $text-cl, uppercase );
+            @include transition($t);
             .header__menu-big {
                 justify-content: space-between;
                 display: flex;
@@ -56,12 +105,54 @@ header {
                     }
                 }
             }
-            
+            &.scroll {
+                @include transition($t);
+                background: #ffde00;
+                border-bottom: none;
+                padding: 0 20px;
+            }
+        }
+    }
+    .menu-mobile {
+        position: fixed;
+        background-color: $yellow-cl;
+        z-index: 9;
+        width: 100%;
+        height: 100%;
+        right: 100%;
+        @include transition($t);
+        .nav {
+            @include mid();
+            li {
+                a {
+                    text-decoration: none;
+                    @include text(16px, pr ,normal, $white-cl, uppercase);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 50px 0;
+                    @include transition($t);
+                    &:hover {
+                        @include transition($t);
+                        color: $text-black-cl;
+                    }
+                }
+            }
+        }
+        &.active {
+            right: 0;
+            @include transition($t);
+
         }
     }
     @include xs  {
         .header__top {
             height: 60px;
+            .container {
+                .menuBtn {
+                    display: block;
+                }
+            }
         }
         .header__menu {
             display: none;

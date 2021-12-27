@@ -21,6 +21,7 @@
                 .project__full {
                     padding-right: 110px;
                     display: flex;
+                    cursor: pointer;
                     &-text {
                         @include mid(true);
                         padding-right: 20px;
@@ -31,6 +32,7 @@
                 }
                 .project__backto {
                     display: flex;
+                    cursor: pointer;
                     &-text {
                         @include mid(true);
                         padding-right: 30px;
@@ -49,10 +51,12 @@
                 height: 530px;
                 max-height: 530px;
                 position: relative;
+                top: 50%;
+                transform: translateY(-50%);
                 img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    // object-fit: cover;
                     @include mid()
                 }
             }
@@ -72,7 +76,7 @@
                 padding-bottom: 20px;
             }
             &-des {
-                @include text(11px ,pb,22px, $text-cl, normal);
+                @include text(11px ,pr,22px, $text-cl, normal);
             }
             &.center {
                 text-align: center;
@@ -115,6 +119,33 @@
                     grid-area: 1/1/2/2;
                 }
             }
+        }
+    }
+}
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffde00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    .loader {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: 4px solid #171717;
+        animation: loader 2s infinite ease;
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #171717;
+            animation: loader-inner 2s infinite ease-in;
         }
     }
 }

@@ -10,6 +10,7 @@ footer{
       margin-left: 0px;
       &__left div > span {
         @include text(12px, pr , 30.48px, $text-cl, uppercase);
+        letter-spacing: 1px;
         display: block;
       }
       .row__left-top {
@@ -112,6 +113,7 @@ footer{
               color: #ff0000;
               font-style: italic;
               font-family: pr;
+              text-transform: lowercase;
             }
           }
           .send-button {
