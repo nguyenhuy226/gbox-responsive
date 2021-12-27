@@ -1,13 +1,14 @@
 // css header
 
 header {
-    $heightHeader : 140px;
     max-height: $heightHeader;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
     .header__top {
         background-color: $gray-cl;
         height: 70px; 
         // position: fixed;
-        z-index: 10;
         .container {
             position: relative;
             .menuBtn {
@@ -110,6 +111,9 @@ header {
                 background: #ffde00;
                 border-bottom: none;
                 padding: 0 20px;
+                .header__menu-big {
+                    border-bottom: initial;
+                }
             }
         }
     }

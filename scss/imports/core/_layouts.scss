@@ -78,6 +78,7 @@ body {
     .mainwrapper {
         width: 100%;
         margin: auto;
+        padding-top: $heightHeader
     }
     @include lg {
         // CSS responsive large desktop

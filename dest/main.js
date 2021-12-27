@@ -61,7 +61,10 @@ $(window).on('load', function () {
     $('.loader-wrapper').fadeOut('slow')
 })
 
+
+// xử lý khi scroll header-menu đổi màu 
 let $menu = document.querySelector('.header__menu')
+let header = document.querySelector('header')
 window.addEventListener('scroll', function () {
     let scrollTop = document.querySelector('html').scrollTop
     if (scrollTop > $menu.offsetHeight) {
@@ -70,6 +73,27 @@ window.addEventListener('scroll', function () {
         $menu.classList.remove('scroll')
     }
 })
+
+// scroll xuống menu ẩn, scroll lên menu hiện
+let prevScroll = $('html').scrollTop()
+$(document).scroll(function () {
+    if (prevScroll < window.pageYOffset) {
+        $('header').css({
+            top: -$('.header__top').height(),
+            transition: 'all 0.4s ease-in-out'
+        })
+    } else {
+        $('header').css({
+            top: 0,
+            transition: 'all 0.4s ease-in-out'
+        })
+    }
+    prevScroll = window.pageYOffset
+})
+
+
+
+
 // thư viện photoswipe
 var initPhotoSwipeFromDOM = function(gallerySelector) {
   var parseThumbnailElements = function(el) {
