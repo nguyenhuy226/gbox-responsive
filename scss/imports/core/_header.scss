@@ -151,7 +151,7 @@ header {
     }
     @include xs  {
         .header__top {
-            height: 60px;
+            height: $heightHeaderMobile;
             .container {
                 .menuBtn {
                     display: block;

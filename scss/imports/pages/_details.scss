@@ -7,6 +7,7 @@
         }
         &__backtoall {
             display: flex;
+            cursor: pointer;
             justify-content: flex-end;
             align-items: center;
             padding: 30px 0;
@@ -40,6 +41,9 @@
                 .flickity-button {
                     display: block;
                 }
+                .flickity-fullscreen-button-exit {
+                    top: 140px;
+                }
             }
         }
         &__control {
@@ -53,6 +57,7 @@
                 margin-top: 30px;
                 height: 20px;
                 &-download {
+                    cursor: pointer;
                     display: flex;
                     .slider__wrap-icon {  
                         @include mid(true);
@@ -61,6 +66,7 @@
                 }
                 &-full {
                     display: flex;
+                    cursor: pointer;
                     .slider__wrap-icon {
                         @include mid(true);
                         padding-left: 16px;
@@ -205,7 +211,7 @@
                     display: none;
                 }
                 &.is-fullscreen {
-                    padding: 80% 0 ;
+                    padding: 50% 10%;
                     .flickity-viewport {
                        
                         .slider__item {
@@ -214,6 +220,9 @@
                     }
                     .flickity-button {
                         display: block;
+                    }
+                    .flickity-fullscreen-button-exit {
+                        top: 70px;
                     }
                 }
             }

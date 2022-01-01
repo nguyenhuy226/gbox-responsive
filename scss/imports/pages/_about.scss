@@ -13,7 +13,7 @@
                 z-index: 0;
                 height: 100%;
                 img {
-                    @include midimg();
+                    @include midimg(100%);
                     background-color: #282828;
 
                 }
@@ -48,6 +48,15 @@
                 &-logo {
                     width: 100%;
                     right: 0px;
+                }
+                .container {
+                    .about__content {
+                        padding-top: 50px;
+                        &-title {
+                            font-size: 26px;
+                            letter-spacing: 20px;
+                        }
+                    }
                 }
             }
         }

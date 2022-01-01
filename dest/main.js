@@ -91,8 +91,25 @@ $(document).scroll(function () {
     prevScroll = window.pageYOffset
 })
 
-
-
+// xử lý click nút control trong rental
+let controlBtns = document.querySelectorAll('.rental__right .rental__right-booking .rental__right-content .rental__control-item')
+controlBtns.forEach(controlBtn => {
+    controlBtn.addEventListener('click', function () {
+        if (controlBtn.classList.contains('active')) {
+            controlBtn.classList.remove('active')
+        } else {    
+            this.classList.add('active')
+        }
+    })
+})
+// xử lý nut backtotop
+document.querySelector('.footer__bottom-logo').addEventListener('click', function (e) {
+    e.preventDefault()
+    window.scrollBy({
+        top: -document.body.offsetHeight,
+        behavior: 'smooth'
+    })
+})
 
 // thư viện photoswipe
 var initPhotoSwipeFromDOM = function(gallerySelector) {

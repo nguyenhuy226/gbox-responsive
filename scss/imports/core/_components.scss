@@ -38,7 +38,7 @@
                 padding-bottom: 70px;
                 &-title {
                     padding-top: 36px;
-                    @include text(12px , pe , 30.48px ,$text-cl, uppercase);
+                    @include text(12px , pr , 30.48px ,$text-cl, uppercase);
                     position: relative;
                     &::after {
                         content: "";
@@ -63,6 +63,7 @@
             @include mid(true);
             li {
                 padding: 0 16px;
+                cursor: pointer;
                 &:hover {
                     color: $text-cl;
                 }
@@ -99,7 +100,7 @@
                 .object {
                     &__img {
                         a {
-                            height: 313.64px;   
+                            height: 250px;   
                         }
                     }
                     img {
@@ -116,6 +117,7 @@
     text-align: center;
     position: relative;
     @include mid();
+    width: 100%;
     &::after {
         content: "";
         width: 320px;
@@ -179,10 +181,11 @@
         }   
         .present__des {
             @include text(12px ,pb,22px ,$text-cl,normal);
-            width: 760px;
-            margin-bottom: 50px;
+            max-width: 760px;
+            margin: 0 auto 50px;
+
         }
-    }
+    }   
     .present__foot {
         @include text(14px ,pr,22px ,$text-white-cl,uppercase);
         letter-spacing: 2px;
@@ -201,6 +204,7 @@
             .container {
                 .present__des {
                     max-width: 100%;
+                    margin-bottom: 30px;
                 }   
             }
         }

@@ -7,7 +7,7 @@
             position: relative;
             overflow: hidden;
             img {
-                @include midimg()
+                @include midimg(100%)
             }
         }
     }
@@ -212,11 +212,11 @@
                     @include text(14px ,pr , 22px ,$text-cl, uppercase);
                     letter-spacing: 2px;
                     padding-bottom: 20px;
-                    
+
                 }
                 &__des {
-                    width: 440px;
-                    @include text(12px , pb , 22px , $text-cl, normal);
+                    max-width: 440px;
+                    @include text(12px , pr , 22px , $text-cl, normal);
                     letter-spacing: -0.5px;
                     text-align: center;
                 }

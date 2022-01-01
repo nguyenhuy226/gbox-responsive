@@ -127,6 +127,12 @@ img {
         .textbox__box {
             margin-bottom: initial;
         }
+        @include xs {
+            .textbox__text {
+                padding-left: 40px;
+                padding-right: 70px;
+            }
+        }
     }
     &.instudio {
         padding: initial;

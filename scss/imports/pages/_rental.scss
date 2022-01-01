@@ -178,10 +178,10 @@
                 @include mid(true);
                 margin-right: 20px;
                 border: 1px solid #464646;
+                &.active,
                 &:hover {
                   color: $text-cl;
                   background-color: $yellow-cl;
-  
                 }
               }
             }
@@ -350,55 +350,63 @@
         }
       }
       &__right {
-        &-company {
-          padding: 0 0 30px 0;
-          .rental__right-content {
-            .rental__form {
-              .form {
-                .input {
-                  max-width: 100%;
-                  width: 100%;
-                  margin-right: initial;
-                  &.message {
+        .form__rental {
+          .rental__right-company {
+            padding: 0 0 30px 0;
+            .rental__right-content {
+              .rental__form {
+                display: block;
+                .form {
+                  .input {
                     max-width: 100%;
                     width: 100%;
+                    margin-right: initial;
+                    &.message {
+                      max-width: 100%;
+                      width: 100%;
+                    }
                   }
                 }
               }
             }
           }
-        }
-        &-booking {
-          .rental__right-content {
-            .rental__control {
-              &-item {
-                margin-right: 30px;
-              }
-            }
-            .rental__feedbacks {
-              display: block;
-              .rental__feedback {
-                width: 100%;
-                max-width: 100%;
-                .rental__label-last {
-                  display: none;
+          .rental__right-booking {
+            .rental__right-content {
+              .rental__control {
+                &-item {
+                  margin-right: 30px;
                 }
               }
-            }
-            .rental__duration {
-              &-content {
+              .rental__feedbacks {
                 display: block;
-                .rental__input-wrap {
-                  input {
-                    width: 100%;
-                    max-width: 100%;
+                .rental__feedback {
+                  width: 100%;
+                  max-width: 100%;
+                  .rental__label-last {
+                    display: none;
                   }
                 }
-                .rental__duration-icon {
-                  padding: 15px 0;
-                  @include mid(true);
-                  img {
-                    @include transform(rotate(-90deg))
+              }
+              .rental__duration {
+                &-content {
+                  display: block;
+                  .rental__input-wrap {
+                    input {
+                      width: 100%;
+                      max-width: 100%;
+                    }
+                  }
+                  .rental__duration-icon {
+                    padding: 15px 0;
+                    @include mid(true);
+                    img {
+                      @include transform(rotate(-90deg))
+                    }
+                  }
+                }
+                &-input {
+                  .input__field {
+                    width: 100%;
                   }
                 }
               }

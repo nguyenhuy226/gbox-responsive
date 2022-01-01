@@ -119,6 +119,7 @@ footer{
           .send-button {
             width: 67px;
             height: 30px;
+            margin-top: 20px;
             @include text(10px ,pb,normal,$white-cl,uppercase);
             background-color: #171717;
             border: 0;
@@ -161,6 +162,7 @@ footer{
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 20px;
       &-logo {
         width: 22px;
       }
@@ -179,17 +181,13 @@ footer{
     bottom: 0;
     z-index: -1;
   }
-  &.contact {
-    &::after {
-      height: 100%;
-    }
-  }
 
   @include xs {
-    .row__left:last-child {
-      display: none;
-    }
+    // .row__left:last-child {
+    //   display: none;
+    // }
     .container {
+      padding-bottom: 100px;
       .row {
         .row__left-top {
           padding-bottom: initial;
@@ -198,20 +196,25 @@ footer{
         span {
           text-align: center;
         }
+        .footer__form {
+          .form {
+            margin-left: initial;
+            .input {
+              width: 100%;
+              .input__label-content {
+                text-align: left;
+              }
+            }
+          }
+        }
       }
       .footer__bottom {
         padding-top: 46px;
       }
     }
     &::after {
-      height: 245px;
+      height: 700px;
     }
-    &.contact {
-      .container {
-        .row {
-            display: none;
-        }
-      }
-    }
+    
   }
 }

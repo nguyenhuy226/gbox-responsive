@@ -60,6 +60,12 @@
                     @include mid()
                 }
             }
+            &.is-fullscreen {
+                padding: 0 20%;
+                .flickity-fullscreen-button-exit {
+                    top: 140px;
+                }
+            }
         }
     }
     .describe {
@@ -70,6 +76,7 @@
             padding-bottom: 80px;
             border-bottom: 1px solid $black-cl;
         }
+
         &__item {
             &-title {
                 @include text(14px, pr,22px ,$text-cl,uppercase);
@@ -97,6 +104,12 @@
                 .project__item {
                     max-height: 282px;
                     img {
+                    }
+                }
+                &.is-fullscreen {
+                    padding: initial;
+                    .flickity-fullscreen-button-exit {
+                        top: 70px;
                     }
                 }
             }

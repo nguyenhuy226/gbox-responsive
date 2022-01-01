@@ -30,6 +30,9 @@
                             &:hover {
                                 img {
                                     @include transform(translate(-50% ,-50%) scale(1.08));
+                                    filter: brightness(162%);
+                                    -webkit-filter: brightness(162%);
+                                    -moz-filter: brightness(162%);
                                     @include transition($t)
                                 }
                             }
@@ -60,6 +63,7 @@
                             padding-top: 40px;
                             &-img {
                                 width: 100%;
+                                height: 220px;
                             }
                             &-text {
                                 .textbox {
