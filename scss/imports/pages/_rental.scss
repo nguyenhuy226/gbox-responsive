@@ -178,6 +178,7 @@
                 @include mid(true);
                 margin-right: 20px;
                 border: 1px solid #464646;
+                cursor: pointer;
                 &.active,
                 &:hover {
                   color: $text-cl;
@@ -245,6 +246,7 @@
                     height: 40px;
                     border: 1px solid $text-black-cl;
                     position: relative;
+                    padding: 8px;
                     &:focus {
                       outline: none;
                     }
